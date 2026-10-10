@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação Google</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 40px 20px; }
+    h2 { color: #333; }
+  </style>
+</head>
+<body>
+  <div id="msg"><h2>Redirecionando para a avaliação...</h2></div>
+
+  <script>
+    // Cole o link do Google de cada cliente entre as aspas:
+    const links = {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": "",
+      "11": "",
+      "12": "",
+      "13": "",
+      "14": "",
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": "",
+      "20": "",
+      "21": "",
+      "22": "",
+      "23": "",
+      "24": "",
+      "25": "",
+      "26": "",
+      "27": "",
+      "28": "",
+      "29": "",
+      "30": "",
+      "31": "",
+      "32": "",
+      "33": "",
+      "34": "",
+      "35": "",
+      "36": "",
+      "37": "",
+      "38": "",
+      "39": "",
+      "40": "",
+      "41": "",
+      "42": "",
+      "43": "",
+      "44": "",
+      "45": "",
+      "46": "",
+      "47": "",
+      "48": "",
+      "49": "",
+      "50": ""
+    };
+
+    const id = new URLSearchParams(window.location.search).get("p");
+    const destino = links[id];
+
+    if (destino && destino.trim() !== "") {
+      window.location.replace(destino);
+    } else {
+      document.getElementById("msg").innerHTML = `
+        <h2>Placa #${id || '?'}</h2>
+        <p>Esta placa de avaliação ainda não foi ativada.</p>
+      `;
+    }
+  </script>
+</body>
+</html>
